@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { SessionProvider } from "@/components/auth/session-provider";
+import { ErrorBoundary } from "@/components/ErrorBoundary";
 
 export const metadata: Metadata = {
   title: "App",
@@ -15,7 +16,9 @@ export default function RootLayout({
   return (
     <html lang="de">
       <body>
-        <SessionProvider>{children}</SessionProvider>
+        <SessionProvider>
+          <ErrorBoundary>{children}</ErrorBoundary>
+        </SessionProvider>
       </body>
     </html>
   );
