@@ -23,6 +23,12 @@ export default async function DashboardLayout({
               Dashboard
             </Link>
             <Link
+              href="/dashboard/projects"
+              className="text-sm font-medium text-gray-500 hover:text-gray-900"
+            >
+              Projekte
+            </Link>
+            <Link
               href="/dashboard/profile"
               className="text-sm font-medium text-gray-500 hover:text-gray-900"
             >
